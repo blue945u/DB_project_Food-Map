@@ -1,0 +1,108 @@
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<META http-equiv="Content-Type" content="text/html; charset=big5">
+<?php
+
+if($_SESSION['id'] == null) {
+	echo "<script language=\"javaScript\">"; 
+	echo "window.alert('您無權限觀看此頁面!')";
+    echo "<meta http-equiv=REFRESH CONTENT=2;url=index.html>";
+	echo "</script>";
+}
+
+?>
+<head>
+
+<title>Delicious Fruit | Dieter Schneider 2007 | www.csstemplateheaven.com</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+
+<div id="header_left">
+<h1>台灣 <span class="red">美食地圖</span></h1>
+<h2>Tastes like heaven</h2>
+</div>
+
+<div id="header_right">
+
+<p class="welcome">歡迎光臨美食地圖<a href="#">請登入或註冊</a>.</p>
+
+  <form id="form1" method="post" action="">
+    <p><label>帳號
+    <input type="text" class="fields" name="textfield" />
+    </label>
+    <label>密碼
+    <input type="text" class="fields" name="textfield2" />
+	<input type="submit" class="submit_button" name="Submit" value="註冊" />
+    	<input type="submit" class="submit_button" name="Submit" value="登入" />
+    </label></p>
+  </form>
+  </div>
+  
+</div>
+
+<div id="left">
+
+<h4><span class="menu_first_letter">功能選單</span></h4>
+
+<div id="navcontainer">
+<ul id="navlist">
+<li id="active"><a href="customer_home.html" id="current">首頁</a></li>
+<li class="green"><a href="region.html" target="farme">選地區</a></li>
+<li><a href="type.html"  target="farme">選種類</a></li>
+<li><a href="budget.html"  target="farme">選預算</a></li>
+<li><a href="about.html"  target="farme">關於我們</a></li>
+</ul>
+</div>
+
+<h4>聯絡我們</h4>
+
+
+  <form id="form2" method="post" class="contact_us" action="">
+    <p><label>姓名
+    <input type="text" class="fields_contact_us" name="textfield" />
+    </label>
+    <label>E-mail
+    <input type="text" class="fields_contact_us" name="textfield2" />
+	</label>
+	<label>
+    我想說：
+    <textarea name="textarea" cols="" rows=""></textarea>
+	</label>
+    <label>
+    <input type="submit" class="submit_button_contact" name="Submit3" value="送出" />
+    </label></p>
+  </form>
+
+<h4>Suggested links </h4>
+
+
+
+<a href="http://www.csstemplateheaven.com">CssTemplateHeaven</a></div>
+
+
+<div id="right">
+
+<div class="date_box">
+<div class="date_box_month">Jan</div>
+<div class="date_box_day">18</div>
+</div>
+<iframe name="farme" width="450" height="600" frameborder="2" scrolling="no"></iframe>
+</div>
+
+<div id="footer">Created by: Lilian Leo Coco 2015 | <a href="http://www.csstemplateheaven.com">www.csstemplateheaven.com</a> </div>
+</div>
+
+
+</body>
+</html>
+
+

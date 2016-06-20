@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style_assign.css" />
+	<title> ASSIGN_CUSTOMER </title>
+</head>
+
+<script language="JavaScript">
+	function FINAL_CHECK() {
+		if(document.form1.id.value=="") {
+			alert("帳號要記得打喔~^^");
+			
+			return false;
+		}
+		else if(document.form1.pw.value=="") {
+			alert("密碼不能忘記喔~^^");
+			
+			return false;
+		}
+		else if(document.form1.pw2.value=="") {
+			alert("請再次輸入密碼~^^");
+			return false;
+		}
+		else if(document.form1.pw.value!=document.form1.pw2.value) {
+			alert("兩次的密碼不一致呦~^^");
+			return false;
+		}
+		else if(docment.form1.name.value=="") {
+			alert("你的大名是~?");
+			return false;
+		}
+		return true;
+	}
+</script>
+<body onBlur="javascript:this.focus()">
+	<div id="container">
+		<h2> 想要註冊嗎? 請輸入以下的資料: </h2> <br>
+		<form name="form1" method="post" action="customer_assign.php" onsubmit="return FINAL_CHECK();">
+			<label> <h3>帳號</h3>
+			<input type="text" class="fields" name="id" value="" />
+			</label> <br>
+			<label> <h3>密碼</h3>
+			<input type="password" class="fields" name="pw" value="" />
+			</label> <br>
+			<label> <h3> 請再次輸入密碼 </h3>
+			<input type="password" class="fields" name="pw2" value="" />
+			</label> <br>
+			<label> <h3>姓名</h3>
+			<input type="text" class="fields" name="name" value="" />
+			</label> <br>
+			<label> <h3>電話號碼</h3>
+			<input type="text" class="fields" name="tel" value="" />
+			</label>
+			<br>
+			<input type="submit" name="Submit" value="提交" />
+			<input onclick="window.close()" value="放棄" type="button" />
+		</form>
+	
+	</div>
+</body>
+</html>

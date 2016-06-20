@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>謝霆鋒 Nicholas Tse</title>
+
+<body background="bg.jpg" text="black" link="bule" 
+vlink="purple" bgproperties="fixed">
+
+<body>
+<center>
+
+<!--標題-->
+<body>
+<canvas id="myCanvas" width="800" height="100"></canvas>
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+<!--漸變-->
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","green");
+gradient.addColorStop("1","blue");
+<!--漸變-->
+ctx.fillStyle=gradient;
+ctx.font="bolder 70px 微軟正黑體";
+ctx.fillText("謝霆鋒 ",80,70);
+ctx.font="bold 70px Berlin Sans FB";
+ctx.fillText("Nicholas Tse",310,70);
+
+</script>
+</body>
+<!--標題-->
+
+
+
+<br>
+<img src="01.jpg" width="400" height="491" align="center" border="5">
+</br>
+</center>
+
+
+<!--跑馬燈-->
+<br>
+<marquee behavior="slide">
+<img src="home/home01.png" width="300" height="356">
+<img src="home/home02.png" width="300" height="356">
+<img src="home/home03.png" width="300" height="356">
+<img src="home/home04.png" width="300" height="356">
+<img src="home/home05.png" width="300" height="356">
+</marquee>
+<!--跑馬燈-->
+
+
+</body>
+
+<META http-equiv="Content-Type" content="text/html; charset=big5">
+<bgsound src=“Mozart.wav" loop=“2">
+</head>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> LOGIN_CUSTOMER </title>
+	<link rel="stylesheet" type="text/css" href="style_login.css" />
+	
+	<script language="javascript">
+
+	function FINAL_CHECK() {
+		if(document.form1.id.value == "" || document.form1.pw.value == "") {
+			alert("全部打完才能提交喔~XD");
+			return false;
+		}
+		return true;
+	}
+   </script>
+</head>
+
+<body onBlur="javascript:this.focus()">
+	<div id="container">
+		<h2> 親愛的顧客，我們歡迎你~^^ </h2>
+		<form name="form1" method="post" action="customer_login.php" onsubmit="return FINAL_CHECK();">
+			<p><label>帳號
+			<input type="text" class="fields" name="id" value="" />
+			</label><br>
+			<label>密碼
+			<input type="password" class="fields" name="pw" value="" />
+			</label><br>
+			<input type="submit" name="Submit" value="登入" />
+			<input onclick="window.close()" value="退出" type="button" />
+			</p>
+		</form>
+	<h3> 沒有帳號嗎?請<a href="customer_assign.html">註冊</a>或以<a href=>訪客</a>身分登入 </h3>
+	
+	</div>
+</body>
+
+</html>
